@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>100% Assurance Vie - Leadway Assurance</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin:0; padding:0; background: #f7f9fc; color: #333; }
+        header { background: #004aad; color: white; padding: 20px 10px; text-align: center; }
+        nav { background: #003377; display: flex; justify-content: center; gap: 15px; padding: 10px 0; }
+        nav a { color: white; text-decoration: none; font-weight: 600; padding: 6px 12px; border-radius: 4px; }
+        nav a:hover { background: #002255; }
+        main { max-width: 900px; margin: 20px auto; padding: 0 15px; }
+        section { margin-bottom: 40px; }
+        h2 { color: #004aad; margin-bottom: 15px; border-bottom: 2px solid #004aad; padding-bottom: 6px; }
+        .insurance-list { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 20px; }
+        .insurance-item { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgb(0 0 0 / 0.1); }
+        .insurance-item h3 { color: #003377; }
+        button { background: #004aad; border: none; color: white; padding: 10px 18px; cursor: pointer; border-radius: 5px; }
+        button:hover { background: #002c7a; }
+        form { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 3px 7px rgb(0 0 0 / 0.15); max-width: 500px; }
+        label { display: block; margin-bottom: 6px; font-weight: 600; }
+        input, select { width: 100%; padding: 8px 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; }
+        footer { background: #003377; color: white; text-align: center; padding: 15px 10px; font-size: 0.9rem; }
+        .whatsapp-button { position: fixed; bottom: 20px; right: 20px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; }
+        .whatsapp-icon { width: 32px; height: 32px; fill: white; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>100% Assurance Vie</h1>
+    <p>Protégez votre avenir dès aujourd’hui avec Leadway Assurance</p>
+</header>
+
+<nav>
+    <a href="#assurances">Nos Assurances</a>
+    <a href="#pourquoi">Pourquoi Nous Choisir</a>
+    <a href="#contact">Contact / Souscription</a>
+</nav>
+
+<main>
+    <section id="assurances">
+        <h2>Nos Assurances</h2>
+        <div class="insurance-list">
+            <div class="insurance-item"><h3>Assurance Vie</h3><p>Une protection complète pour votre famille en cas de coup dur.</p></div>
+            <div class="insurance-item"><h3>Assurance Santé</h3><p>Garantissez vos soins médicaux sans souci financier.</p></div>
+            <div class="insurance-item"><h3>Assurance Décès</h3><p>Une sécurité financière pour vos proches.</p></div>
+            <div class="insurance-item"><h3>Assurance Éducation</h3><p>Préparez l’avenir scolaire de vos enfants en toute sérénité.</p></div>
+            <div class="insurance-item"><h3>Assurance Retraite</h3><p>Assurez-vous une retraite confortable et sans stress.</p></div>
+            <div class="insurance-item"><h3>Assurance Voyage</h3><p>Voyagez l’esprit tranquille avec une couverture complète.</p></div>
+            <div class="insurance-item"><h3>Assurance Habitation</h3><p>Protégez votre maison contre les imprévus.</p></div>
+            <div class="insurance-item"><h3>Assurance Auto</h3><p>Roulez en toute sécurité avec une couverture adaptée.</p></div>
+        </div>
+    </section>
+
+    <section id="pourquoi">
+        <h2>Pourquoi Nous Choisir ?</h2>
+        <ul>
+            <li>Fiabilité reconnue de Leadway Assurance</li>
+            <li>Processus simple et rapide</li>
+            <li>Service client disponible et à l’écoute</li>
+            <li>Témoignages positifs de nos clients satisfaits</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact / Souscription</h2>
+        <form onsubmit="return handleForm(event)">
+            <label for="name">Nom complet</label><input type="text" id="name" required>
+            <label for="phone">Numéro WhatsApp</label><input type="tel" id="phone" required>
+            <label for="email">Adresse email</label><input type="email" id="email" required>
+            <label for="insuranceType">Type d'assurance souhaitée</label>
+            <select id="insuranceType" required>
+                <option value="">-- Choisir --</option>
+                <option value="Vie">Assurance Vie</option>
+                <option value="Santé">Assurance Santé</option>
+                <option value="Décès">Assurance Décès</option>
+                <option value="Éducation">Assurance Éducation</option>
+                <option value="Retraite">Assurance Retraite</option>
+                <option value="Voyage">Assurance Voyage</option>
+                <option value="Habitation">Assurance Habitation</option>
+                <option value="Auto">Assurance Auto</option>
+            </select>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+</main>
+
+<a href="https://wa.me/225585026920" target="_blank" class="whatsapp-button" aria-label="Contact WhatsApp">
+    <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M20.52 3.48A11.83 11.83 0 0012.02 0C5.37 0 .02 5.34.02 12a11.72 11.72 0 002.04 6.54L0 24l5.68-2.97a11.95 11.95 0 006.34 1.76c6.65 0 12.02-5.34 12.02-12.02 0-3.22-1.26-6.24-3.52-8.3zM12.02 21.65a9.63 9.63 0 01-5.16-1.46l-.37-.22-3.36 1.76 1.79-3.29-.25-.38a9.57 9.57 0 011.58-11.66 9.55 9.55 0 0113.52 0 9.63 9.63 0 01-6.95 16.25zm5.22-7.2c-.29-.15-1.73-.85-2-.94-.27-.1-.47-.15-.67.15s-.77.94-.95 1.14-.35.22-.65.07a7.64 7.64 0 01-2.25-1.4 8.41 8.41 0 01-1.56-1.92c-.17-.3-.02-.46.13-.6.13-.13.29-.35.44-.52a1.6 1.6 0 00.22-.37c.07-.12.03-.22-.02-.31-.05-.1-.66-1.59-.9-2.17-.24-.57-.48-.5-.67-.51-.17 0-.37 0-.57 0-.2 0-.53.07-.8.38s-1.05 1.03-1.05 2.5 1.08 2.91 1.23 3.11c.15.2 2.12 3.24 5.14 4.54a17.72 17.72 0 002.33 1.04 3.07 3.07 0 003.5-.89c1.09-1.3 1.21-2.56.85-2.81z"/>
+    </svg>
+</a>
+
+<script>
+    function handleForm(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const insuranceType = document.getElementById('insuranceType').value;
+        if (!name || !phone || !email || !insuranceType) {
+            alert('Veuillez remplir tous les champs.');
+            return false;
+        }
+        const message = encodeURIComponent(
+            `Bonjour, je m'appelle ${name}. Je souhaite avoir des informations sur l'assurance : ${insuranceType}. Mon email : ${email}. Mon numéro WhatsApp : ${phone}. Merci.`
+        );
+        window.open(`https://wa.me/225585026920?text=${message}`, '_blank');
+        return false;
+    }
+</script>
+
+<footer>
+    &copy; 2025 100% Assurance Vie - Tous droits réservés
+</footer>
+
+</body>
+</html>
